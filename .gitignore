@@ -1,5 +1,8 @@
 # Ignore everything
 *
+/app/
+/src/
+/test/
 
 # But not these files...
 !.gitignore
