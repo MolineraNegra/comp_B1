@@ -1,12 +1,12 @@
 # Ignore everything
 *
-app/*
-src/*
-test/*
+#app/*
+#src/*
+#test/*
 
 # But not these files...
 !.gitignore
-!*.hs
-!*.cabal
-!*.yaml
-!*.txt
+!**.hs
+!**.cabal
+!**.yaml
+!**.txt
