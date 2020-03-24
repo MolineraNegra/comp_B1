@@ -15,8 +15,8 @@ square
 square a = a*a
 
 ggT :: Integer -> Integer -> Integer
-ggT (a,b)
+ggT a b
  | a == 0    = b
  | b == 0    = a
- | b >  a    = ggT(b,a)
- | otherwise = ggT(b,a `mod` b)
+ | b >  a    = ggT b a
+ | otherwise = ggT b (a `mod` b)
