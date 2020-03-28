@@ -5,6 +5,12 @@ import Lib
 import Test.Hspec
 import Test.QuickCheck
 
+check :: Integer -> Integer -> Bool
+check n k = do
+    if n >= 0 && k >= 0
+        then True
+        else False
+
 
 --main :: IO ()
 --main = hspec $ do 
@@ -23,7 +29,7 @@ spec = do
     describe "ggT" $ do
         it "calculates the ggT of 3528 and 3780" $
             ggT 3528 3780 `shouldBe` 252 --https://de.wikipedia.org/wiki/Gr%C3%B6%C3%9Fter_gemeinsamer_Teiler
-        --it "calculates the ggT of an arbitrary integer" $
-            --property $ \a b -> (check a b) ==> ggT a b == gcd a b 
         it "calculates the ggT of an arbitrary integer" $
-            property $ \a b -> ggT a b == gcd a b 
+            property $ \a b -> (check a b) ==> ggT a b == gcd a b 
+        --it "calculates the ggT of an arbitrary integer" $
+            --property $ \a b -> ggT a b == gcd a b 
